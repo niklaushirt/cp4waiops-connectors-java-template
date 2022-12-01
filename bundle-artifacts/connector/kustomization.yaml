@@ -13,21 +13,7 @@ configurations:
 
 images:
   - name: java-grpc-connector-template
-    newName: PLACEHOLDER_REGISTRY_ADDRESS/cp/aiopsedge/java-grpc-connector-template
+    newName: docker.io/niklaushirt/java-grpc-connector-template
     newTag: latest
 
-vars:
-  - name: SERVICE_NAME
-    objref:
-      kind: Service
-      name: java-grpc-conn-template
-      apiVersion: v1
-    fieldref:
-      fieldpath: metadata.name
-  - name: SERVICE_NAMESPACE
-    objref:
-      kind: Service
-      name: java-grpc-conn-template
-      apiVersion: v1
-    fieldref:
-      fieldpath: metadata.namespace
+

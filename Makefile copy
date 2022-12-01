@@ -15,8 +15,7 @@ docker-login:
 
 docker-build:
 	chmod ug+x container/import-certs.sh
-	#docker build -f container/Dockerfile -t $(DOCKER_IMAGE) .
-	docker buildx build --platform linux/amd64 -t $(DOCKER_IMAGE) --load -f container/Dockerfile .
+	docker build -f container/Dockerfile -t $(DOCKER_IMAGE) .
 
 docker-push:
 	docker push $(DOCKER_IMAGE)
