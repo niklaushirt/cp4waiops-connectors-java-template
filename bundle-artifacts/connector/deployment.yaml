@@ -35,7 +35,7 @@ spec:
                     values:
                       - linux
       initContainers:
-        - image: java-grpc-connector-template:unreleased-main-latest
+        - image: java-grpc-connector-template:latest
           imagePullPolicy: Always
           name: cert-setup
           command:
@@ -65,7 +65,7 @@ spec:
             readOnlyRootFilesystem: false
             runAsNonRoot: true
       containers:
-        - image: java-grpc-connector-template:unreleased-main-latest
+        - image: java-grpc-connector-template:latest
           imagePullPolicy: Always
           name: java-grpc-connector-template
           env:
@@ -155,7 +155,7 @@ spec:
                     - key: port
                       path: port
               - secret:
-                  name: connector
+                  name: connector-local-orchestrator
                   items:
                     - key: id
                       path: id
